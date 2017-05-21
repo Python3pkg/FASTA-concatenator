@@ -97,7 +97,7 @@ def main():
     output_path = make_output_dir('output_' + os.path.splitext(args.input)[0])
     tab_out_path = os.path.join(output_path, fmt_tab_out_path(args.input))
     fasta_out_path = os.path.join(output_path, fmt_fasta_out_path(args.input))
-    print("Writing output to ./" + output_path + "...")
+    print(("Writing output to ./" + output_path + "..."))
 
     with open(args.input, newline='') as tab_in_file, open(tab_out_path, mode='w', newline='') as tab_out_file, open(fasta_out_path, mode='w') as fasta_out_file:
         generate_files(tab_in_file, tab_out_file, fasta_out_file)
